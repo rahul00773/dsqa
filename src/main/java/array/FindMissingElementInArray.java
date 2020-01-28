@@ -21,14 +21,10 @@ public class FindMissingElementInArray {
         int n = arr.length;
         int total = (n+1) * (n+2) /2;
         int sumOfArray = 0;
-
         for(int i = 0 ; i<n; i++){
-
             sumOfArray += arr[i];
 
-
         }
-
 
         return total-sumOfArray;
     }
