@@ -8,7 +8,6 @@ package array;
 public class MoveAllZeroToEnd {
 
     public static void main(String[] args){
-
         int[] arr = {1, 2, 0, 0, 0, 3, 6};
        int x[] =  moveAllZeroToEnd(arr);
 
@@ -16,9 +15,6 @@ public class MoveAllZeroToEnd {
 
            System.out.println(x[i]);
        }
-
-
-
 
     }
 
