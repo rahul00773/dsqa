@@ -10,13 +10,12 @@ public class SegregateZeroAndOneInArray {
     public static void main(String[] args) {
 
         int[] arr = {0, 1, 0, 1, 0, 1, 0, 0, 0};
-        int[] newArr = segregateZeroAndOne(arr);
+        int[] newArr = segregateZeroAndOneUsingCounter(arr);
         for (int i = 0; i < newArr.length; i++)
             System.out.println(newArr[i]);
 
 
     }
-
 
     public static int[] segregateZeroAndOne(int[] arr) {
         int count = 0;
@@ -33,6 +32,33 @@ public class SegregateZeroAndOneInArray {
             newArr[j++] = 1;
 
         return newArr;
+    }
+
+
+    public static int[] segregateZeroAndOneUsingCounter(int[] arr){
+
+        int left =0; int right = arr.length-1;
+
+        while (left<right){
+
+            while (arr[left] ==0 && left<right){
+                left++;
+            }
+
+            while (arr[right] ==1 &&left<right)
+                right--;
+
+            if(left<right)
+            {
+
+                arr[left]=0;
+                arr[right] =1;
+                left++;
+                right--;
+            }
+        }
+
+        return arr;
     }
 
 

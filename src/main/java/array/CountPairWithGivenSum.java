@@ -26,7 +26,7 @@ public class CountPairWithGivenSum {
 
        while (i<j){
 
-           if(arr[i] +arr[j] <sum){
+           if(arr[i] + arr[j] <sum){
                i++;
 
            }
@@ -36,13 +36,14 @@ public class CountPairWithGivenSum {
            }
 
            else {
+
                int x = arr[i], xx = i;
                while ((i < j ) && (arr[i] == x))
                    i++;
 
                int y = arr[j], yy = j;
 
-               while ((j >= i )&& (arr[j] == y))
+               while ((j >= i ) && (arr[j] == y))
                    j--;
 
                if (x == y)
