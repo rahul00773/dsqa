@@ -13,7 +13,7 @@ public class FindMinimumDifferenceBetweenTwoElements {
     private static final int MAX = 100001;
     public static void main(String[] args){
 
-        int[] arr = {1, 2, 3, 4};
+        int[] arr = {1, 2, 3, 4,4};
 
         System.out.println(getMinimumDifference(arr));
 
@@ -27,7 +27,6 @@ public class FindMinimumDifferenceBetweenTwoElements {
         for(int i = 0; i < arr.length-1; i++)
 
         {
-
             freq[i] = 0;
 
         }
@@ -36,12 +35,9 @@ public class FindMinimumDifferenceBetweenTwoElements {
 
         {
 
-
-
             // Update the frequency of current element
 
             freq[arr[i]]++;
-
 
 
             // If current element appears more than once
