@@ -8,6 +8,7 @@ package array.sortingAlgorithm;
 
 /**
  * Insertion Sort - Like playing card- Pick a number . Place it on it right position
+ *
  */
 public class InsertionSort {
 
@@ -21,6 +22,9 @@ public class InsertionSort {
         }
 
     }
+
+    // Key is the variable where we are picking current element. Then compare it with previous ones
+
 
     public static void doInsertionSort(int[] arr){
         int key,j;
