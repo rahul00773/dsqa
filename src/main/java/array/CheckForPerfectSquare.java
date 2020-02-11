@@ -5,6 +5,11 @@ package array;
  * @author rahul.kumar
  * @version $Id: CheckForPerfectSquare.java, v 0.1 2020-02-08 23:43 rahul.kumar Exp $$
  */
+
+/**
+ * A number is a perfect square if it remainder from is zero and after it can be devided with same number
+ *
+ */
 public class CheckForPerfectSquare {
 
 
