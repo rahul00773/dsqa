@@ -11,6 +11,8 @@ package array.sortingAlgorithm;
  * This algorithm is also and divide and conqure algorithm which is basically like Merge sort
  * In quick sort we choose a number and place it on its right position- and numbers from this numbers to left are smaller then this number
  * and in right number all are greater
+ *
+ * The main thing in quick sort is partitioning -
  */
 public class QuickSort {
 
