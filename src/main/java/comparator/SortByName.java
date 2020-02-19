@@ -1,5 +1,5 @@
 
-package array.javalearning.comparator;
+package comparator;
 
 import java.util.Comparator;
 
