@@ -5,6 +5,13 @@ package array;
  * @author rahul.kumar
  * @version $Id: MoveAllZeroToEnd.java, v 0.1 2020-01-31 01:07 rahul.kumar Exp $$
  */
+
+/**
+ * Approach to move all Zero to end
+ * We have taken one variables - count - And we will track till when zero is not present
+ * If element is not equal to zero then we will replace the element with count and increment count
+ * if element is zero we will do nothing
+ */
 public class MoveAllZeroToEnd {
 
     public static void main(String[] args){
@@ -25,6 +32,7 @@ public class MoveAllZeroToEnd {
         for( int i=0; i<arr.length; i++){
 
             if(arr[i] !=0){
+
                 temp = arr[count];
                 arr[count] = arr[i];
                 arr[i] = temp;
