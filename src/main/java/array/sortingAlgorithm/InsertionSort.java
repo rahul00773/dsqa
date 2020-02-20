@@ -1,4 +1,3 @@
-
 package array.sortingAlgorithm;
 
 /**
@@ -8,16 +7,15 @@ package array.sortingAlgorithm;
 
 /**
  * Insertion Sort - Like playing card- Pick a number . Place it on it right position
- *
  */
 public class InsertionSort {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
-        int[] arr = new int[]{5,3,2,1,5};
+        int[] arr = new int[]{5, 3, 2, 1, 5};
         doInsertionSort(arr);
 
-        for( int i =0; i<arr.length; i++){
+        for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
         }
 
@@ -26,20 +24,20 @@ public class InsertionSort {
     // Key is the variable where we are picking current element. Then compare it with previous ones
 
 
-    public static void doInsertionSort(int[] arr){
-        int key,j;
-        for (int i =1; i<arr.length; i++){
+    public static void doInsertionSort(int[] arr) {
+        int key, j;
+        for (int i = 1; i < arr.length; i++) {
 
-             key = arr[i];
-             j =i-1;
+            key = arr[i];
+            j = i - 1;
 
-            while (j>=0 && arr[j]>key){
-                arr[j+1] = arr[j];
-                j = j-1;
+            while (j >= 0 && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j = j - 1;
 
             }
 
-            arr[j+1] =key;
+            arr[j + 1] = key;
         }
 
     }

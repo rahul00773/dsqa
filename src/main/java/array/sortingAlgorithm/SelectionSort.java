@@ -1,4 +1,3 @@
-
 package array.sortingAlgorithm;
 
 /**
@@ -11,25 +10,25 @@ package array.sortingAlgorithm;
  */
 public class SelectionSort {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
-        int[] arr = new int[]{5,3,2,1,5};
+        int[] arr = new int[]{5, 3, 2, 1, 5};
         doSelectionSort(arr);
 
-        for( int i =0; i<arr.length; i++){
+        for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
         }
 
     }
 
-    public static void doSelectionSort(int[] arr){
+    public static void doSelectionSort(int[] arr) {
 
-        for (int i =0; i<arr.length-1; i++){
+        for (int i = 0; i < arr.length - 1; i++) {
 
 
-            for (int j =i+1; j<arr.length; j++){
+            for (int j = i + 1; j < arr.length; j++) {
 
-                if(arr[j]<arr[i]){
+                if (arr[j] < arr[i]) {
 
                     int temp = arr[i];
                     arr[i] = arr[j];
