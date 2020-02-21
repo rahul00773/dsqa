@@ -5,6 +5,15 @@ package array;
  * @author rahul.kumar
  * @version $Id: RemoveDuplicateElementFromArray.java, v 0.1 2020-01-30 23:23 rahul.kumar Exp $$
  */
+
+/**
+ * Approach
+ * Take two pointers i and j
+ * if arr[i] != arr[i+1]  compare i and i+1. If they are not same put it into j and increment j++
+ * arr[j] = arr[i]
+ * j++
+ *
+ */
 public class RemoveDuplicateElementFromArray {
 
     public static void main(String[] args){
