@@ -35,17 +35,21 @@ public class LinkedList {
             linkedList.head.next=sec;
             sec.next = third;
 
-            linkedList.printLinkedList();
+        System.out.println("length of linked list is " +linkedList.printLinkedList());
 
     }
 
-    public  void printLinkedList(){
+    public  int printLinkedList(){
 
+        int length = 0;
         Node n = head;
         while (n!=null){
+            length++;
             System.out.println(n.data +" ");
             n = n.next;
         }
+
+        return length;
     }
 
 }
