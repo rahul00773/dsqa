@@ -52,4 +52,17 @@ public class LinkedList {
         return length;
     }
 
+    public  int printLinkedList(LinkedList.Node head){
+
+        int length = 0;
+        Node n = head;
+        while (n!=null){
+            length++;
+            System.out.println(n.data +" ");
+            n = n.next;
+        }
+
+        return length;
+    }
+
 }
