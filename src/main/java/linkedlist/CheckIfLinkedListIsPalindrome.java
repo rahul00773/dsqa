@@ -21,7 +21,7 @@ public class CheckIfLinkedListIsPalindrome {
         first.next = sec;
         sec.next = third;
         third.next = fourth;
-        fourth.next =fifth;
+       fourth.next =fifth;
 
         System.out.println(isPalindrome(linkedList.head));
 
@@ -31,56 +31,52 @@ public class CheckIfLinkedListIsPalindrome {
     }
 
     public static  boolean isPalindrome(LinkedList.Node head){
-
-
         boolean ans  =true;
-
         LinkedList.Node slow = head;
         LinkedList.Node fast = head;
         LinkedList.Node start = null;
-        while(true){
-            fast = fast.next.next;
-            if(fast ==null){
-
-                start = slow.next;
-                break;
-            }
-             if(fast.next == null){
-                start = slow.next.next;
-                break;
-            }
-
-            slow = slow.next;
-
+        LinkedList.Node midnode = null;
+        while(fast!=null && fast.next!=null){
+          slow= slow.next;
+          fast = fast.next.next;
 
         }
 
+        if (fast != null) {
+            midnode = slow;
+            slow = slow.next;
+        }
+        start = slow.next;
         slow.next = null;
 
-        LinkedList.Node pre = null;
-
-        LinkedList.Node curr = start;
-        LinkedList.Node next = null;
-        while(curr!=null){
-
-            next = curr.next;
-            curr.next  =pre;
-            pre = curr;
-            curr  = next;
-
-        }
-
-        LinkedList.Node a = head;
-        while(a!=null && start!=null){
-
-                if(a.data!=start.data){
+        reverseLinked(start);
+        while(head!=null && start!=null){
+                if(head.data!=start.data){
                 ans = false;
             }
 
-            a = a.next;
+            head = head.next;
             start = start.next;
         }
 
         return ans;
+    }
+
+
+    public static LinkedList.Node reverseLinked(LinkedList.Node head){
+
+        LinkedList.Node pre = null;
+        LinkedList.Node next = null;
+        LinkedList.Node curr= head;
+
+        while (curr!=null){
+
+            next = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = next;
+        }
+
+        return pre;
     }
 }
