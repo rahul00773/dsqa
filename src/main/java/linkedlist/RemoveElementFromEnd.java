@@ -25,37 +25,42 @@ public class RemoveElementFromEnd {
         fourth.next = fifth;
         fifth.next = sixth;
 
-        removeElementFromEnd(linkedList.head,  5);
+       LinkedList.Node n= removeElementFromEnd(linkedList.head,  2);
 
 
-        linkedList.printLinkedList();
+        linkedList.printLinkedList(n);
 
     }
 
 
-    public static LinkedList.Node removeElementFromEnd(LinkedList.Node head, int val){
+    public static LinkedList.Node removeElementFromEnd(LinkedList.Node head, int n){
 
 
-        LinkedList.Node pre = new LinkedList.Node(-1) , cur = pre;
+        LinkedList.Node first  = head;
+        LinkedList.Node sec = head;
 
-        pre.next = head;
+        for(int i =0; i<n; i++){
 
-        while (head!=null)
-        {
-            if(head.data == val){
-                cur.next = head.next;
-                head = cur.next;
+            if(sec.next == null){
+
+                if(i==n-1){
+                    head = head.next;
+                    return head;
+                }
+
+
             }
-
-            else{
-                cur = head;
-                head = head.next;
-            }
+            sec = sec.next;
         }
 
-        return pre.next;
 
+        while (sec.next!=null){
+            first = first.next;
+            sec = sec.next;
+        }
 
+        first.next = first.next.next;
 
+        return head;
     }
 }
