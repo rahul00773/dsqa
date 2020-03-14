@@ -76,17 +76,6 @@ public class MergeTwoSortedLinkedList {
         LinkedList.Node l2current = l2;
 
         LinkedList.Node sor = l3;
-/*
-        if(l1current.data<=l2current.data){
-            sor = l1current;
-            l1current = l1current.next;
-        }
-
-        else{
-            sor = l2current;
-            l2current = l2current.next;
-        }*/
-
 
         while (true) {
             if (l1current == null) {
