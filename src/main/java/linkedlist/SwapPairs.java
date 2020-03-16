@@ -15,17 +15,17 @@ public class SwapPairs {
         LinkedList.Node first = new LinkedList.Node(1);
         LinkedList.Node second = new LinkedList.Node(2);
         LinkedList.Node third = new LinkedList.Node(3);
-        LinkedList.Node fourth = new LinkedList.Node(4);
+       /* LinkedList.Node fourth = new LinkedList.Node(4);
         LinkedList.Node fifth = new LinkedList.Node(5);
-        LinkedList.Node sixth = new LinkedList.Node(6);
+        LinkedList.Node sixth = new LinkedList.Node(6);*/
 
 
         linkedList.head = first;
         first.next = second;
         second.next = third;
-        third.next = fourth;
+       /* third.next = fourth;
         fourth.next = fifth;
-        fifth.next = sixth;
+        fifth.next = sixth;*/
 
        LinkedList.Node n1 =  swapPairs(linkedList.head);
 
@@ -45,15 +45,19 @@ public class SwapPairs {
 
         LinkedList.Node temp = null;
         while (true){
-
             q = curr.next;
            temp = q.next;
 
             q.next = curr;
 
-            if(temp==null ||temp.next==null){
+            if(temp==null ){
 
                 curr.next = null;
+                break;
+            }
+
+            else if(temp.next == null){
+                curr.next = temp;
                 break;
             }
             curr.next = temp.next;
