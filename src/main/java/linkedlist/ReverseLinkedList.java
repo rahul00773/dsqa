@@ -14,12 +14,12 @@ public class ReverseLinkedList {
         LinkedList.Node first= new LinkedList.Node(1);
         LinkedList.Node second = new LinkedList.Node(2);
         LinkedList.Node third = new LinkedList.Node(3);
-        LinkedList.Node fourth = new LinkedList.Node(4);
+        //LinkedList.Node fourth = new LinkedList.Node(4);
 
         linkedList.head=first;
         first.next = second;
         second.next = third;
-        third.next = fourth;
+       // third.next = fourth;
 
         System.out.println("current Linked List");
         linkedList.printLinkedList();
