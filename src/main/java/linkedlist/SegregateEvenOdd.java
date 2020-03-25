@@ -44,16 +44,14 @@ public class SegregateEvenOdd {
             end = end.next;
         }
 
-        LinkedList.Node newHead = end;
+        LinkedList.Node newEnd = end;
 
         while (current.data % 2 != 0 && current != end) {
-            newHead.next = current;
+            newEnd.next = current;
             current = current.next;
-            newHead.next.next = null;
-            newHead = newHead.next;
+            newEnd.next.next = null;
+            newEnd = newEnd.next;
         }
-
-
 
 
         if (current.data % 2 == 0) {
@@ -69,8 +67,8 @@ public class SegregateEvenOdd {
 
                     pre.next = current.next;
                     current.next = null;
-                    newHead.next = current;
-                    newHead = current;
+                    newEnd.next = current;
+                    newEnd = current;
                     current = pre.next;
                 }
             }
@@ -78,11 +76,11 @@ public class SegregateEvenOdd {
 
         else pre = current;
 
-        if (newHead != end && end.data%2 != 0) {
+        if (newEnd != end && end.data%2 != 0) {
 
             pre.next = end.next;
             end.next = null;
-            newHead.next = end;
+            newEnd.next = end;
         }
 
         return head;
