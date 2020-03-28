@@ -29,7 +29,7 @@ public class RemoveDuplicaeFromSortedLinkedList {
         f.next = g;
         g.next = h;
 
-        linkedList.printLinkList(removeDuplicate(linkedList.head));
+        linkedList.printLinkList(removeDup(linkedList.head));
     }
 
     public static LinkedList.Node removeDuplicate(LinkedList.Node head){
@@ -53,6 +53,29 @@ public class RemoveDuplicaeFromSortedLinkedList {
 
 return head;
 
+    }
+
+    public static LinkedList.Node removeDup(LinkedList.Node head){
+
+        LinkedList.Node to_free;
+        if(head == null){
+            return null;
+        }
+
+        if(head.next!=null){
+
+            if(head.data == head.next.data){
+
+                //to_free = head.next;
+                head.next = head.next.next;
+                removeDuplicate(head);
+            }
+            else {
+                removeDuplicate(head.next);
+            }
+        }
+
+        return head;
     }
 
 }
