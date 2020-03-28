@@ -18,7 +18,7 @@ public class CheckIfListIsPalindrom {
         LinkedList.Node c = new LinkedList.Node(2);
         LinkedList.Node d = new LinkedList.Node(2);
         LinkedList.Node f = new LinkedList.Node(1);
-        LinkedList.Node g = new LinkedList.Node(0);
+        LinkedList.Node g = new LinkedList.Node(1);
 
         linkedList.head = a;
         a.next = b;
@@ -52,5 +52,42 @@ public class CheckIfListIsPalindrom {
         }
 
         return true;
+    }
+
+
+    public static boolean checkForPalindromeUsingReverse(LinkedList.Node head){
+
+        LinkedList.Node slow = head;
+        LinkedList.Node fast = head.next;
+        LinkedList.Node mid = null;
+
+        LinkedList.Node secondHalf;
+        LinkedList.Node pre = head;
+
+        if(head!=null && head.next!=null){
+        while (fast!=null && fast.next!=null){
+
+            fast = fast.next.next;
+            pre=slow;
+            slow = slow.next;
+
+
+        }
+
+        if(fast!=null){
+            mid = slow;
+            slow = slow.next;
+
+        }
+
+        secondHalf = slow;
+
+        pre.next =null;
+
+        ReverseALinkedList.reverseLinkedList(secondHalf);
+
+        }
+
+return false;
     }
 }
