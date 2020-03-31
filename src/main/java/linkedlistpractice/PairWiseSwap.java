@@ -39,9 +39,9 @@ public class PairWiseSwap {
         LinkedList.Node next = null;
 
         while (temp.next!=null && temp!=null){
-int k = temp.data;
-temp.data = temp.next.data;
-temp.next.data = k;
+        int k = temp.data;
+            temp.data = temp.next.data;
+        temp.next.data = k;
 temp = temp.next.next;
 
 
