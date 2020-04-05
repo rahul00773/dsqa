@@ -3,9 +3,9 @@ package linkedlist;
 
 /**
  * @author rahul.kumar
- * @version $Id: IntersectionOfTwoLinkedList.java, v 0.1 2020-03-25 21:52 rahul.kumar Exp $$
+ * @version $Id: IntersectionPointOfTwoLinkedList.java, v 0.1 2020-03-25 21:52 rahul.kumar Exp $$
  */
-public class IntersectionOfTwoLinkedList {
+public class IntersectionPointOfTwoLinkedList {
 
     public static void main(String[] args) {
 
