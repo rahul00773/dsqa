@@ -63,6 +63,7 @@ public class SegregateEvenOdd {
 
                     pre = current;
                     current = current.next;
+
                 } else {
 
                     pre.next = current.next;
