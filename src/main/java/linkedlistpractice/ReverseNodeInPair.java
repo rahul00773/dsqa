@@ -7,6 +7,7 @@ package linkedlistpractice;
  */
 public class ReverseNodeInPair {
 
+    static int x=1;
     public static void main(String[] args){
 
         LinkedList linkedList = new LinkedList();
@@ -51,6 +52,7 @@ public class ReverseNodeInPair {
 
        }
        if(next!=null)
+
            head.next=reverseLinkedListInPair(next,k);
 
        return pre;
