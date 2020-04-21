@@ -32,7 +32,7 @@ public class RemoveEveryKthNodeInLinkedList {
         h.next =i;
 
        // linkedList.printLinkList(removeKthNodeUsingIterator(linkedList.head,3));
-        linkedList.printLinkList(removeKthNodeRecursively(linkedList.head,3));
+      //  linkedList.printLinkList(removeKthNodeRecursively(linkedList.head,3));
     }
 
 
@@ -65,7 +65,7 @@ public class RemoveEveryKthNodeInLinkedList {
     }
 
 
-    public static LinkedList.Node removeKthNodeRecursively(LinkedList.Node head, int k){
+   /* public static LinkedList.Node removeKthNodeRecursively(LinkedList.Node head, int k){
 
 
         if(head==null){
@@ -76,9 +76,6 @@ public class RemoveEveryKthNodeInLinkedList {
 
         LinkedList.Node current = head;
 
-
-        for(int i=1; i<k&&current.next!=null; i++){
-
             current=current.next;
 
         }
@@ -87,5 +84,5 @@ public class RemoveEveryKthNodeInLinkedList {
             head=removeKthNodeRecursively(current.next.next,k);
 
         return head;
-    }
+    }*/
 }
