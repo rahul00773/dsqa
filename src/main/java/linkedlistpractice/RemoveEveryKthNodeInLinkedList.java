@@ -31,7 +31,7 @@ public class RemoveEveryKthNodeInLinkedList {
         g.next = h;
         h.next =i;
 
-       // linkedList.printLinkList(removeKthNodeUsingIterator(linkedList.head,3));
+        linkedList.printLinkList(removeKthNodeUsingIterator(linkedList.head,3));
       //  linkedList.printLinkList(removeKthNodeRecursively(linkedList.head,3));
     }
 
