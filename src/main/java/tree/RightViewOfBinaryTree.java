@@ -6,13 +6,11 @@ import java.util.Queue;
 
 /**
  * @author rahul.kumar
- * @version $Id: LeftViewofBinaryTree.java, v 0.1 2020-05-05 07:23 rahul.kumar Exp $$
+ * @version $Id: RightViewOfBinaryTree.java, v 0.1 2020-05-07 22:54 rahul.kumar Exp $$
  */
-public class LeftViewofBinaryTree {
-
+public class RightViewOfBinaryTree {
 
     public static void main(String[] args){
-
         BinaryTree binaryTree = new BinaryTree();
 
         binaryTree.root = new TreeNode("a");
@@ -39,21 +37,21 @@ public class LeftViewofBinaryTree {
         binaryTree.root.right.right.right.left = new TreeNode("m");
         binaryTree.root.right.right.right.right = new TreeNode("n");
 
-        printLevelOrderTraversal(binaryTree.root);
+        printRightViewOfBinaryTree(binaryTree.root);
     }
 
-    public static void printLevelOrderTraversal(TreeNode rootNode){
+    public static void printRightViewOfBinaryTree(TreeNode treeNode){
 
         Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(rootNode);
+        queue.add(treeNode);
         queue.add(null);
-        System.out.println(rootNode.data);
+        System.out.println(treeNode.data);
         while (!queue.isEmpty()) {
             TreeNode temp = queue.poll();
             if (temp == null) {
 
                 if (!queue.isEmpty()) {
-                    System.out.println(((LinkedList<TreeNode>) queue).peekFirst().data);
+                    System.out.println(((LinkedList<TreeNode>) queue).peekLast().data);
                     queue.add(null);
                 }
 
