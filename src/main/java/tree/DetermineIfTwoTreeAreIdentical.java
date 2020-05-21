@@ -7,7 +7,7 @@ package tree;
  */
 public class DetermineIfTwoTreeAreIdentical {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         BinaryTree binaryTree = new BinaryTree();
 
         binaryTree.root = new TreeNode("a");
@@ -44,25 +44,24 @@ public class DetermineIfTwoTreeAreIdentical {
         binaryTree1.root.right.right.right.right = new TreeNode("n");
 
 
-        System.out.println(identicalTrees(binaryTree.root,binaryTree1.root));
+        System.out.println(identicalTrees(binaryTree.root, binaryTree1.root));
 
     }
 
-    public static boolean identicalTrees(TreeNode root1, TreeNode root2){
+    public static boolean identicalTrees(TreeNode root1, TreeNode root2) {
 
-        if(root1==null && root2==null)
+        if (root1 == null && root2 == null)
             return true;
 
 
-        if(root1!=null && root2!=null){
+        if (root1 != null && root2 != null) {
 
-            if(root1.data== root2.data) {
-               return identicalTrees(root1.left, root2.left) &&  identicalTrees(root1.right,root2.right);
+            if (root1.data == root2.data) {
+                return identicalTrees(root1.left, root2.left) && identicalTrees(root1.right, root2.right);
 
 
             }
         }
-
 
 
         return false;
