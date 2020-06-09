@@ -87,10 +87,17 @@ public class PrintBinaryTreeInVerticalOrder {
 
 
     public static void printHashMap(HashMap<Integer,ArrayList<String>> map){
+
+
         for (Map.Entry<Integer, ArrayList<String>> map1 : map.entrySet())
         {
             System.out.println(map1.getKey());
             System.out.println(map1.getValue());
+
+            ArrayList<String> m =map1.getValue();
+
+
+            System.out.println(m.get(0));
         }
     }
 
