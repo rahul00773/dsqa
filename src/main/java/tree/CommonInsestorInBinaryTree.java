@@ -32,7 +32,7 @@ public class CommonInsestorInBinaryTree {
             return node;
         }
 
-    if(node.data==a || node.data==b)
+        if(node.data==a || node.data==b)
          return node;
 
         TreeNode leftLca = getCommonInsestor(node.left,a,b);
@@ -41,7 +41,6 @@ public class CommonInsestorInBinaryTree {
         if(leftLca!=null && rightRca!=null){
             return node;
         }
-
         return (leftLca!=null)?leftLca:rightRca;
 
     }

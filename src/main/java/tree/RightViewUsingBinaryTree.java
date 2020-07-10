@@ -39,24 +39,19 @@ public class RightViewUsingBinaryTree {
     }
 
     public static void printRightView(TreeNode treeNode){
-
-
         printRightViewUsingPreOrder(treeNode,1);
 
     }
 
 
     public static void printRightViewUsingPreOrder(TreeNode treeNode, int level){
-
         if(treeNode==null){
             return;
         }
-
         if(max<level) {
             System.out.println(treeNode.data);
             max = level;
         }
-
         printRightViewUsingPreOrder(treeNode.right,level+1 );
         printRightViewUsingPreOrder(treeNode.left,level+1 );
 

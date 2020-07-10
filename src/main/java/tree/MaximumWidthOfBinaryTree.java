@@ -1,13 +1,10 @@
-
 package tree;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Queue;
 
-/**
- * @author rahul.kumar
- * @version $Id: LevelOrderTraversalOfBinaryTree.java, v 0.1 2020-05-03 10:52 rahul.kumar Exp $$
- */
-public class LevelOrderTraversalOfBinaryTree {
+public class MaximumWidthOfBinaryTree {
+
     public static void main(String[] args) {
         BinaryTree binaryTree = new BinaryTree();
 
@@ -36,27 +33,31 @@ public class LevelOrderTraversalOfBinaryTree {
         binaryTree.root.right.right.right.right = new TreeNode("n");
 
 
-        levelOrderTraversal(binaryTree.root);
+        System.out.println(maximumWidth(binaryTree.root));
     }
 
-    public static void levelOrderTraversal(TreeNode rootNode) {
+    public static int maximumWidth(TreeNode node){
 
-        Stack<TreeNode> node = new Stack<>();
-        node.add(rootNode);
-        node.pop();
+        if(node ==null){
+            return 0;
+        }
+
         Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(rootNode);
+
+        queue.add(node);
         queue.add(null);
+        int width=0;
+
         while (!queue.isEmpty()) {
+
             TreeNode temp = queue.poll();
+
             if (temp == null) {
+                width = width + 1;
                 if (!queue.isEmpty()) {
-                    System.out.println("");
                     queue.add(null);
                 }
-
             } else {
-                System.out.print(temp.data + " ");
                 if (temp.left != null) {
                     queue.add(temp.left);
                 }
@@ -65,13 +66,7 @@ public class LevelOrderTraversalOfBinaryTree {
                 }
             }
         }
-
-        List<List<Integer>>  list = new ArrayList<>();
-        List<List<Integer>>  list2 = new ArrayList<>();
-
-        for(int i =list.size();i>0; i--){
-           list2.add(list.get(i));
-        }
+        return width;
 
     }
 }

@@ -44,7 +44,6 @@ public class PrintKNodesFromRoot {
         if(root==null){
             return;
         }
-
         if(k==0){
             System.out.println(root.data);
             return;
