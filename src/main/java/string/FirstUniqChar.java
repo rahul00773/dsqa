@@ -1,6 +1,8 @@
 
 package string;
 
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 
 /**
@@ -9,34 +11,71 @@ import java.util.HashSet;
  */
 public class FirstUniqChar {
 
+
+    static final int NO_OF_CHARS = 256;
+    static HashMap<Character, CountIndex> hm
+            = new HashMap<Character, CountIndex>(NO_OF_CHARS);
+
+
     public static void main(String[] args){
-        System.out.println(getFirstUniq("loveleetcode"));
+        System.out.println(getFirstUniq("b"));
 
     }
 
-    public static int getFirstUniq(String s){
+    public static Character  getFirstUniq(String str){ ;
+        getCharCountArray(str);
+        int result = Integer.MAX_VALUE, i;
 
-        int ans = -1;
-        HashSet<Character> hashSet = new HashSet<>();
-
-        for (int i = s.length()-1; i>=0; i--){
-
-            if(!hashSet.contains(s.charAt(i))){
-               ans =i;
-                hashSet.add(s.charAt(i));
+        for (i = 0; i < str.length(); i++) {
+            // If this character occurs only once and appears
+            // before the current result, then update the result
+            if (hm.get(str.charAt(i)).count == 1
+                    && result > hm.get(str.charAt(i)).index) {
+                result = hm.get(str.charAt(i)).index;
             }
-
-            else {
-
-
-                hashSet.add(s.charAt(i));
-            }
-
-
-
         }
 
-        return ans;
+          if(result == Integer.MAX_VALUE)
+              return null;
 
+          return str.charAt(result);
+
+
+    }
+
+    static void getCharCountArray(String str)
+    {
+        for (int i = 0; i < str.length(); i++) {
+            // If character already occurred,
+            if (hm.containsKey(str.charAt(i))) {
+                // updating count
+                hm.get(str.charAt(i)).incCount();
+            }
+
+            // If it's first occurrence, then store
+            // the index and count = 1
+            else {
+                hm.put(str.charAt(i), new CountIndex(i));
+            }
+        }
+    }
+
+
+
+    static class CountIndex {
+        int count, index;
+
+        // constructor for first occurrence
+        public CountIndex(int index)
+        {
+            this.count = 1;
+            this.index = index;
+        }
+
+        // method for updating count
+        public void incCount()
+        {
+            this.count++;
+        }
     }
 }
