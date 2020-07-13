@@ -52,18 +52,12 @@ public class DetermineIfTwoTreeAreIdentical {
 
         if (root1 == null && root2 == null)
             return true;
-
-
         if (root1 != null && root2 != null) {
-
             if (root1.data == root2.data) {
                 return identicalTrees(root1.left, root2.left) && identicalTrees(root1.right, root2.right);
 
-
             }
         }
-
-
         return false;
     }
 }
