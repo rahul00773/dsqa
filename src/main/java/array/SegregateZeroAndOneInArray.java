@@ -10,7 +10,7 @@ public class SegregateZeroAndOneInArray {
     public static void main(String[] args) {
 
         int[] arr = {0, 1, 0, 1, 0, 1, 0, 0, 0};
-        int[] newArr = segregateZeroAndOneUsingCounter(arr);
+        int[] newArr = test(arr);
         for (int i = 0; i < newArr.length; i++)
             System.out.println(newArr[i]);
 
@@ -61,5 +61,29 @@ public class SegregateZeroAndOneInArray {
         return arr;
     }
 
+
+    public static int[] test(int[] arr){
+
+        int i=0;
+
+        int j= arr.length-1;
+
+
+        while (i<j){
+
+
+            if(arr[i]>arr[j]){
+
+
+               int temp= arr[j];
+               arr[j]=arr[i];
+               arr[i]=temp;
+            }
+
+            i++;
+            j--;
+        }
+        return  arr;
+    }
 
 }
