@@ -18,7 +18,7 @@ public class LengthOfLinkedListUsingRecursive {
         LinkedList.Node fourth = new LinkedList.Node(4);
 
         linkedList.head=first;
-      /*  first.next = second;
+      /* first.next = second;
         second.next = third;
         third.next = fourth;*/
 
