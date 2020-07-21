@@ -36,46 +36,27 @@ public class DiagonalTraversal {
 
     public static void printBinaryTreeDiagonally(TreeNode rootNode) {
 
-
-        TreeNode pointerp = rootNode;
-
         Queue<TreeNode> queue = new LinkedList<>();
-
         queue.add(rootNode);
-
         queue.add(null);
-
         while (queue.size() > 0) {
-
             TreeNode temp = queue.peek();
-
             queue.remove();
-
             if (temp == null) {
-
                 if (queue.isEmpty()) {
                     return;
                 }
-
                 System.out.println();
-
                 queue.add(null);
             }
-
-
             while (temp != null) {
-
                 System.out.print(temp.data + " ");
-
                 if (temp.left != null) {
                     queue.add(temp.left);
                 }
-
                 temp = temp.right;
             }
-
         }
-
 
     }
 }
