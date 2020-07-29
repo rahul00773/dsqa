@@ -9,8 +9,8 @@ public class SegregateZeroAndOneInArray {
 
     public static void main(String[] args) {
 
-        int[] arr = {0, 1, 0, 1, 0, 1, 0, 0, 0,1,1,1};
-        int[] newArr = test(arr);
+        int[] arr = {0, 1, 0, 1, 0,0,1,0,0, 1, 0, 0, 0,1,1,1};
+        int[] newArr = seg(arr);
         for (int i = 0; i < newArr.length; i++)
             System.out.println(newArr[i]);
 
@@ -93,4 +93,30 @@ public class SegregateZeroAndOneInArray {
         return  arr;
     }
 
+
+    public static int[] seg(int[] ar){
+
+        System.out.println("by using switch statemnet");
+        int i=0; int j =ar.length-1;
+
+        while (i<j){
+
+            switch (ar[i]){
+                case 0:{
+
+                    i++;
+                }
+
+                case 1: {
+
+                    ar[j--]=1;
+                    ar[i++]=0;
+
+                }
+            }
+
+        }
+
+        return ar;
+    }
 }
