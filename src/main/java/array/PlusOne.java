@@ -14,11 +14,11 @@ public class PlusOne {
 
         for(int i=n-2; i>=0; i--){
             if(carry==1){
-                int x = digits[i]+1;
-                digits[i]=x;
+                digits[i] = digits[i]+1;
+                //digits[i]=x;
                 carry = digits[i] / 10;
-                int k = digits[i]%10;
-                digits[i]=k;
+                digits[i] = digits[i]%10;
+                //digits[i]=k;
 
             }
         }
@@ -40,7 +40,7 @@ public class PlusOne {
     }
 
     public static void main(String[] args){
-        int[] arr = {9};
+        int[] arr = {8,9,9};
 
        int[] arr2= plusOne(arr);
 
