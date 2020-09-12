@@ -27,9 +27,7 @@ list.add("Hey");
     public static ArrayList<String> removeDuplicates(List<String> input) {
 
         TreeSet<String> str = new TreeSet();
-
         for(int i =0; i<input.size(); i++){
-
             if(!str.contains(input.get(i) ) ){
                 str.add(input.get(i));
             }
@@ -37,9 +35,7 @@ list.add("Hey");
 
 
         ArrayList<String> list = new ArrayList<>();
-
         for(String s : str){
-
             list.add(s);
         }
 
