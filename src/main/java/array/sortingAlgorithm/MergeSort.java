@@ -6,21 +6,19 @@ package array.sortingAlgorithm;
  */
 public class MergeSort {
 
-
     public static void main(String[] args) {
+        int[] arr = {12, 11, 13, 5, 6, 7};
 
-
-        int[] arr = new int[]{5, 3, 2, 1, 5};
+        System.out.println("Given Array"); 
+        printArray(arr);
         MergeSort mergeSort = new MergeSort();
         mergeSort.doMergeSort(arr, 0, arr.length - 1);
-
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
-        }
+        System.out.println("\nSorted array"); 
+        printArray(arr); 
     }
 
 
-    public void doMergeSort(int[] arr, int p, int r) {
+     void doMergeSort(int[] arr, int p, int r) {
 
         if (p < r) {
             int q = (p + r) / 2;
@@ -33,63 +31,62 @@ public class MergeSort {
     }
 
 
-    void merge(int[] arr, int p, int q, int r) {
-
-
+    static  void merge(int[] arr, int p, int q, int r) {
         int n1 = q - p + 1;
         int n2 = r - q;
-
         int[] arr1 = new int[n1];
         int[] arr2 = new int[n2];
         int i, j;
-        for (i = 0; i < n1; ++i) {
-
+        for (i = 0; i < n1; i++) {
             arr1[i] = arr[p + i];
         }
 
-        for (j = 0; j < n2; ++j) {
+        for (j = 0; j < n2; j++) {
 
             arr2[j] = arr[q + 1 + j];
 
         }
+        int k = p;
+         i = 0;
+         j = 0;
 
-        //   arr1[i] = Integer.MAX_VALUE;
-        //  arr2[j] = Integer.MAX_VALUE;
 
-        int k = 0;
-
-        int l = 0, ri = 0;
-
-        while (l < n1 && ri < n2) {
-
-            if (arr1[l] <= arr2[ri]) {
-
-                arr[k] = arr1[l];
-
-                l++;
+        while (i < n1 && j < n2) {
+            if (arr1[i] <= arr2[j]) {
+                arr[k] = arr1[i];
+                i++;
             } else {
-                arr[k] = arr2[ri];
-                ri++;
+                arr[k] = arr2[j];
+                j++;
             }
-
             k++;
         }
 
-       /* while (l < n1)
+        while (i < n1)
         {
-            arr[k] = arr1[l];
-            l++;
+            arr[k] = arr1[i];
+            i++;
             k++;
         }
 
        //  Copy remaining elements of R[] if any
-        while (ri < n2)
+        while (j < n2)
         {
-            arr[k] = arr2[ri];
-            ri++;
+            arr[k] = arr2[j];
+            j++;
             k++;
-        }*/
+        }
 
     }
+
+
+
+    static void printArray(int arr[]) 
+    { 
+        int n = arr.length; 
+        for (int i = 0; i < n; ++i) 
+            System.out.print(arr[i] + " "); 
+        System.out.println(); 
+    } 
 
 }
