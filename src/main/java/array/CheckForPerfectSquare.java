@@ -15,7 +15,7 @@ public class CheckForPerfectSquare {
 
     public static void main(String[] args){
 
-        System.out.println("is given number a perfect square ?: " + checkPerfectSquareOrNot(49));
+        System.out.println("is given number a perfect square ?: " + checkPerfectSquareOrNot(10));
 
 
     }
@@ -24,7 +24,7 @@ public class CheckForPerfectSquare {
     public static boolean checkPerfectSquareOrNot(int n){
 
 
-        Math.sqrt(2);
+       // Math.sqrt(2);
 
         for (int i =1 ; i*i <=n ; i++){
 

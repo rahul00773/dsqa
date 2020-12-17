@@ -23,17 +23,11 @@ public class PrintAllCombinationOfString {
 
 
          for(int i=l; i<=r; i++){
-
-
              s= swap(s,l,i);
              printAllPossibleCom(s,l+1,r);
-             s=swap(s,l,i);
-
+            // s=swap(s,l,i);
          }
      }
-
-
-
 
     }
 

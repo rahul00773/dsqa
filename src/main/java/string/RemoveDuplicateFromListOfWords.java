@@ -16,9 +16,16 @@ list.add("Hey");
         list.add("Hi");
         list.add("Hello");
         list.add("Hey");
+        list.add("name");
         //{"Hi", "Hello", "Hey", "Hi", "Hello", "Hey"}
 
-        removeDuplicates(list);
+       ArrayList<String> list1 = removeDuplicates(list);
+
+        for (String s:
+             list1) {
+            System.out.println(s);
+
+        }
 }
 
 

@@ -57,12 +57,9 @@ public class PairOfArray {
         HashSet<Integer> set  = new HashSet<>();
 
         for(int i =0; i< arr.length; i++){
-
-
             if(!(set.contains(sum-(arr[i])))){
                 set.add(arr[i]);
             }
-
             else{
                 System.out.println("pait is " + arr[i] +" " + (sum-arr[i]));
             }

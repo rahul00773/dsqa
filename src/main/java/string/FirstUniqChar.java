@@ -18,12 +18,13 @@ public class FirstUniqChar {
 
 
     public static void main(String[] args){
-        System.out.println(getFirstUniq("b"));
+        System.out.println(getFirstUniq("abcbee"));
 
     }
 
     public static Character  getFirstUniq(String str){ ;
         getCharCountArray(str);
+
         int result = Integer.MAX_VALUE, i;
 
         for (i = 0; i < str.length(); i++) {
